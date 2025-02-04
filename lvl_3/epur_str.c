@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 16:56:54 by obouftou          #+#    #+#             */
-/*   Updated: 2025/01/16 18:06:35 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/04 17:00:31 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 int main (int ac, char **av)
 {
     int i = 0;
-    // int j = 0;
     if (ac == 2)
     {   
         while (av[1][i] == 32)
@@ -36,7 +35,3 @@ int main (int ac, char **av)
     }
     write(1, "\n", 1);
 }
-
-
-
-/*db ana khassni nctchi kolla klma o nskippi spaces o ndir 7daha lklma tanya ila akhir string */
