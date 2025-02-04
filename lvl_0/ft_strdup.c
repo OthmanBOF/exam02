@@ -6,42 +6,47 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:08:37 by obouftou          #+#    #+#             */
-/*   Updated: 2025/01/12 17:18:38 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/04 12:34:50 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
+/*
+Assignment name  : ft_strdup
+Expected files   : ft_strdup.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+
+Reproduce the behavior of the function strdup (man strdup).
+
+Your function must be declared as follows:
+
+char    *ft_strdup(char *src);
+*/
+
 
 char    *ft_strdup(char *src)
 {
+    char *dup;
+    int x = 0; 
+    while (src[x])
+        x++;
+    dup = malloc(sizeof(char *) * (x + 1));
+    if (!dup)
+        return(NULL);
     int i = 0;
-    char *tmp;
-
-    while (src[i])
-        i++;
-    tmp = malloc(i + 1);
-    if (!tmp)
-        return (NULL);
-    i = 0;
     while (src[i])
     {
-        tmp[i] = src[i];
+        dup[i] = src[i];
         i++;
     }
-    tmp[i] = '\0';
-    return (tmp);
+    return (dup);
 }
-
-#include <stdio.h>
-
 int main ()
 {
-    printf("%s\n%s", ft_strdup("dazai"), "dazai");
+    char *str = ft_strdup ("dazai");
+
+    printf("%s\n", str);
 }
-// int main()
-// {
-// 	char	*a;
-// 	a = "Hello World";
-// 	printf("%s\n", ft_strdup(a));
-// }
