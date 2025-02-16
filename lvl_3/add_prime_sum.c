@@ -6,7 +6,7 @@
 /*   By: obouftou <obouftou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:17:06 by obouftou          #+#    #+#             */
-/*   Updated: 2025/02/04 16:58:53 by obouftou         ###   ########.fr       */
+/*   Updated: 2025/02/13 09:48:36 by obouftou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,3 +87,4 @@ int main (int ac, char **av)
 		ft_putnbr(0);
 	return (0);
 }
+
